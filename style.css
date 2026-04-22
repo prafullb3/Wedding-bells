@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff7f0;
+  color: #333;
+  text-align: center;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #c94b4b, #4b134f);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.hero span {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.countdown #timer {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event-card {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.location iframe {
+  width: 90%;
+  height: 300px;
+  border: none;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.rsvp form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvp input, .rsvp button {
+  padding: 10px;
+  width: 250px;
+  margin: 10px 0;
+}
+
+.rsvp button {
+  background: #c94b4b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  background: #4b134f;
+  color: white;
+}
