@@ -9,48 +9,64 @@
 </head>
 <body>
 
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">Aniket & Jyoti</div>
+    <ul class="nav-menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#countdown" class="nav-link">Countdown</a></li>
+      <li><a href="#events" class="nav-link">Events</a></li>
+      <li><a href="#story" class="nav-link">Our Story</a></li>
+      <li><a href="#location" class="nav-link">Location</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" id="home">
+  <div class="lotus-top">🌸</div>
   <div class="hero-content">
-    <div class="ornament top-left">✦</div>
-    <div class="ornament top-right">✦</div>
     <h1 class="hero-title">Aniket & Jyoti</h1>
-    <div class="divider"></div>
+    <div class="mandala-divider">◆ ◆ ◆</div>
     <p class="hero-subtitle">Are Getting Married</p>
+    <p class="hero-blessing">With blessings of the Buddha and our families</p>
     <span class="hero-date">💍 9th May, 2026 💍</span>
-    <div class="ornament bottom-left">✦</div>
-    <div class="ornament bottom-right">✦</div>
   </div>
-  <div class="floating-hearts">
-    <span class="heart">💕</span>
-    <span class="heart">💕</span>
-    <span class="heart">💕</span>
-  </div>
+  <div class="lotus-bottom">🌸</div>
 </section>
 
 <!-- Countdown -->
-<section class="countdown">
-  <div class="section-title">
-    <h2>Countdown to the Big Day</h2>
-    <div class="decorative-line"></div>
+<section class="countdown" id="countdown">
+  <h2 class="section-heading">⏳ Countdown to the Big Day ⏳</h2>
+  <div class="decorative-lotus"></div>
+  <div id="timer" class="timer-display">
+    <div class="timer-item">
+      <span class="timer-number">0</span>
+      <span class="timer-label">Days</span>
+    </div>
+    <span class="timer-colon">:</span>
+    <div class="timer-item">
+      <span class="timer-number">0</span>
+      <span class="timer-label">Hours</span>
+    </div>
+    <span class="timer-colon">:</span>
+    <div class="timer-item">
+      <span class="timer-number">0</span>
+      <span class="timer-label">Minutes</span>
+    </div>
+    <span class="timer-colon">:</span>
+    <div class="timer-item">
+      <span class="timer-number">0</span>
+      <span class="timer-label">Seconds</span>
+    </div>
   </div>
-  <div id="timer" class="timer-display"></div>
-</section>
-
-<!-- About -->
-<section class="about">
-  <h2 class="section-heading">✨ Wedding Celebration ✨</h2>
-  <div class="decorative-line"></div>
-  <p class="about-text">
-    With the blessings of our families,  
-    we invite you to join us in celebrating our wedding.
-  </p>
 </section>
 
 <!-- Events -->
-<section class="events">
-  <h2 class="section-heading">🎉 Wedding Events 🎉</h2>
-  <div class="decorative-line"></div>
+<section class="events" id="events">
+  <h2 class="section-heading">🎉 Wedding Ceremony 🎉</h2>
+  <div class="decorative-lotus"></div>
   <div class="events-container">
     <div class="event-card featured">
       <div class="event-header">
@@ -60,41 +76,91 @@
       <p class="event-date">9th May 2026</p>
       <p class="event-time">12:30 PM</p>
       <div class="event-footer">
-        <span class="decorative-dot">•</span>
-        <span class="location-text">Venue TBA</span>
-        <span class="decorative-dot">•</span>
+        <span class="decorative-dot">🌸</span>
+        <span class="location-text">Pandurang Palace</span>
+        <span class="decorative-dot">🌸</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- About Section -->
+<section class="about">
+  <h2 class="section-heading">✨ Wedding Celebration ✨</h2>
+  <div class="decorative-lotus"></div>
+  <p class="about-text">
+    With the blessings of the Buddha and our families, we invite you to join us in celebrating this sacred union of two souls. May our marriage bring joy, peace, and prosperity to all.
+  </p>
+  <p class="about-blessing">नमस्ते | Namasté</p>
+</section>
+
+<!-- Our Story Section -->
+<section class="story" id="story">
+  <h2 class="section-heading">💑 Our Love Story 💑</h2>
+  <div class="decorative-lotus"></div>
+  <div class="story-timeline">
+    <div class="story-item">
+      <div class="story-marker">1</div>
+      <div class="story-content">
+        <h3>Our First Meeting</h3>
+        <p>A moment when two souls found each other...</p>
+      </div>
+    </div>
+    <div class="story-connector"></div>
+    <div class="story-item">
+      <div class="story-marker">2</div>
+      <div class="story-content">
+        <h3>Love Blooms</h3>
+        <p>Like a lotus emerging from the depths of water...</p>
+      </div>
+    </div>
+    <div class="story-connector"></div>
+    <div class="story-item">
+      <div class="story-marker">3</div>
+      <div class="story-content">
+        <h3>A Promise</h3>
+        <p>Two hearts beating as one, forever bound...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery">
+  <h2 class="section-heading">📸 Our Moments 📸</h2>
+  <div class="decorative-lotus"></div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <div class="photo-placeholder">📷 Add Photo 1</div>
+    </div>
+    <div class="gallery-item">
+      <div class="photo-placeholder">📷 Add Photo 2</div>
+    </div>
+    <div class="gallery-item">
+      <div class="photo-placeholder">📷 Add Photo 3</div>
+    </div>
+    <div class="gallery-item">
+      <div class="photo-placeholder">📷 Add Photo 4</div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location" id="location">
+  <h2 class="section-heading">📍 Venue 📍</h2>
+  <div class="decorative-lotus"></div>
+  <p class="location-name">Pandurang Palace</p>
+  <p class="location-address">Deep-Jyoti Nagar, Old MIDC Rd, Latur</p>
+  <a href="https://share.google/02qBLSwI9nIWMpmj5" target="_blank" class="location-link">🗺️ View on Google Maps</a>
+</section>
+
 <!-- Footer -->
 <footer>
   <div class="footer-content">
-    <p>🙏 Looking Forward to Celebrating with You 🙏</p>
-    <p class="footer-tagline">May Love & Happiness be with Us Always</p>
+    <p class="footer-blessing">🙏 With Love & Blessings 🙏</p>
+    <p class="footer-tagline">May the Buddha's light guide our journey together</p>
+    <p class="footer-names">~ Aniket & Jyoti ~</p>
   </div>
-</footer>
-
-<!-- Location -->
-<section class="location">
-  <h2 class="section-heading">📍 Venue 📍</h2>
-  <div class="decorative-line"></div>
-  <p>Pandurang Palace, Deep-Jyoti Nagar, Old MIDC Rd, Latur</p>
-  <a href="https://share.google/02qBLSwI9nIWMpmj5" target="_blank" class="location-link">View on Google Maps</a>
-</section>
-
-<!-- Gallery -->
-<section class="gallery">
-  <h2>Our Moments</h2>
-  <img src="https://source.unsplash.com/300x300/?wedding" />
-  <img src="https://source.unsplash.com/301x300/?couple" />
-  <img src="https://source.unsplash.com/302x300/?bride" />
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>With Love ❤️ Aniket & Jyoti</p>
 </footer>
 
 <script src="script.js"></script>
