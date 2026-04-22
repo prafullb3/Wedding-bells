@@ -5,27 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wedding Invitation | Aniket & Jyoti</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- Hero Section -->
 <section class="hero">
-  <h1>Aniket & Jyoti</h1>
-  <p>Are Getting Married</p>
-  <span>💍 9th May, 2026 💍</span>
+  <div class="hero-content">
+    <div class="ornament top-left">✦</div>
+    <div class="ornament top-right">✦</div>
+    <h1 class="hero-title">Aniket & Jyoti</h1>
+    <div class="divider"></div>
+    <p class="hero-subtitle">Are Getting Married</p>
+    <span class="hero-date">💍 9th May, 2026 💍</span>
+    <div class="ornament bottom-left">✦</div>
+    <div class="ornament bottom-right">✦</div>
+  </div>
+  <div class="floating-hearts">
+    <span class="heart">💕</span>
+    <span class="heart">💕</span>
+    <span class="heart">💕</span>
+  </div>
 </section>
 
 <!-- Countdown -->
 <section class="countdown">
-  <h2>Countdown to the Big Day</h2>
-  <div id="timer"></div>
+  <div class="section-title">
+    <h2>Countdown to the Big Day</h2>
+    <div class="decorative-line"></div>
+  </div>
+  <div id="timer" class="timer-display"></div>
 </section>
 
 <!-- About -->
 <section class="about">
-  <h2>Wedding Celebration</h2>
-  <p>
+  <h2 class="section-heading">✨ Wedding Celebration ✨</h2>
+  <div class="decorative-line"></div>
+  <p class="about-text">
     With the blessings of our families,  
     we invite you to join us in celebrating our wedding.
   </p>
@@ -33,30 +49,39 @@
 
 <!-- Events -->
 <section class="events">
-  <h2>Wedding Events</h2>
-  <div class="event-card">
-    <h3>Haldi</h3>
-    <p>14 Dec 2026 | 10:00 AM</p>
-  </div>
-  <div class="event-card">
-    <h3>Wedding Ceremony</h3>
-    <p>15 Dec 2026 | 7:00 PM</p>
-  </div>
-  <div class="event-card">
-    <h3>Reception</h3>
-    <p>16 Dec 2026 | 8:00 PM</p>
+  <h2 class="section-heading">🎉 Wedding Events 🎉</h2>
+  <div class="decorative-line"></div>
+  <div class="events-container">
+    <div class="event-card featured">
+      <div class="event-header">
+        <span class="event-emoji">🌹</span>
+        <h3>Wedding Ceremony</h3>
+      </div>
+      <p class="event-date">9th May 2026</p>
+      <p class="event-time">12:30 PM</p>
+      <div class="event-footer">
+        <span class="decorative-dot">•</span>
+        <span class="location-text">Venue TBA</span>
+        <span class="decorative-dot">•</span>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>🙏 Looking Forward to Celebrating with You 🙏</p>
+    <p class="footer-tagline">May Love & Happiness be with Us Always</p>
+  </div>
+</footer>
+
 <!-- Location -->
 <section class="location">
-  <h2>Venue</h2>
-  <p>Royal Garden Banquet, Pune</p>
-  <iframe 
-    src="https://www.google.com/maps?q=pune&output=embed"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
+  <h2 class="section-heading">📍 Venue 📍</h2>
+  <div class="decorative-line"></div>
+  <p>Pandurang Palace, Deep-Jyoti Nagar, Old MIDC Rd, Latur</p>
+  <a href="https://share.google/02qBLSwI9nIWMpmj5" target="_blank" class="location-link">View on Google Maps</a>
 </section>
 
 <!-- Gallery -->

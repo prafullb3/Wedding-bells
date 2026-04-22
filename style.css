@@ -6,88 +6,447 @@
 }
 
 body {
-  background: #fff7f0;
+  background: linear-gradient(135deg, #fef7f2 0%, #f5e6db 100%);
   color: #333;
   text-align: center;
+  overflow-x: hidden;
 }
 
+/* Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(to bottom right, #c94b4b, #4b134f);
+  background: linear-gradient(135deg, #d4547e 0%, #a83860 50%, #6b2d5e 100%);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero h1 {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  animation: scaleIn 0.8s ease-out;
 }
 
-.hero span {
-  margin-top: 10px;
-  font-size: 1.2rem;
+.divider {
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 20px auto;
+  animation: slideIn 0.8s ease-out 0.2s both;
 }
 
-section {
-  padding: 60px 20px;
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  animation: fadeIn 0.8s ease-out 0.3s both;
 }
 
-.countdown #timer {
-  font-size: 1.5rem;
+.hero-date {
+  font-size: 1.4rem;
   margin-top: 20px;
+  display: inline-block;
+  animation: fadeIn 0.8s ease-out 0.4s both;
 }
 
+.ornament {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+.ornament.top-left {
+  top: 40px;
+  left: 40px;
+  animation-delay: 0s;
+}
+
+.ornament.top-right {
+  top: 40px;
+  right: 40px;
+  animation-delay: 1s;
+}
+
+.ornament.bottom-left {
+  bottom: 40px;
+  left: 40px;
+  animation-delay: 2s;
+}
+
+.ornament.bottom-right {
+  bottom: 40px;
+  right: 40px;
+  animation-delay: 1.5s;
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: float 4s ease-in-out infinite;
+}
+
+.heart:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  right: 15%;
+  top: 50%;
+  animation-delay: 1.3s;
+}
+
+.heart:nth-child(3) {
+  left: 50%;
+  bottom: 20%;
+  animation-delay: 2.6s;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 20px;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background: white;
+}
+
+.section-title, .section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #6b2d5e;
+  margin-bottom: 15px;
+  animation: slideUp 0.6s ease-out;
+}
+
+.decorative-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #d4547e, transparent);
+  margin: 15px auto 30px;
+  animation: slideIn 0.6s ease-out 0.2s both;
+}
+
+/* Countdown */
+.countdown {
+  background: linear-gradient(135deg, #f5e6db 0%, #fef7f2 100%);
+  padding: 80px 20px;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  color: #d4547e;
+  font-weight: 600;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* About Section */
+.about {
+  background: white;
+}
+
+.about-text {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 30px auto;
+  font-weight: 300;
+}
+
+/* Events Section */
 .events {
+  background: linear-gradient(135deg, #f5e6db 0%, #fef7f2 100%);
+  padding: 80px 20px;
+}
+
+.events-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .event-card {
   background: white;
-  padding: 20px;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 40px 30px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+  animation: slideUp 0.6s ease-out;
 }
 
-.location iframe {
-  width: 90%;
-  height: 300px;
-  border: none;
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(212, 84, 126, 0.2);
+  border-color: #d4547e;
+}
+
+.event-card.featured {
+  background: linear-gradient(135deg, #d4547e 0%, #a83860 100%);
+  color: white;
+  transform: scale(1.05);
+}
+
+.event-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.event-emoji {
+  font-size: 2.5rem;
+}
+
+.event-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.event-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.event-time {
+  font-size: 1rem;
+  color: inherit;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.event-footer {
+  padding-top: 15px;
+  border-top: 1px solid rgba(212, 84, 126, 0.3);
+  color: inherit;
+  opacity: 0.8;
+}
+
+.decorative-dot {
+  margin: 0 8px;
+}
+
+.location-text {
+  font-size: 0.9rem;
+}
+
+/* Location Section */
+.location {
+  background: white;
+  padding: 80px 20px;
+}
+
+.location p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 30px 0;
+  line-height: 1.6;
+}
+
+.location-link {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #d4547e 0%, #a83860 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
   margin-top: 20px;
 }
 
-.gallery img {
-  width: 250px;
-  margin: 10px;
-  border-radius: 10px;
+.location-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 84, 126, 0.3);
 }
 
-.rsvp form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.location-link:active {
+  transform: translateY(-1px);
 }
 
-.rsvp input, .rsvp button {
-  padding: 10px;
-  width: 250px;
-  margin: 10px 0;
-}
-
-.rsvp button {
-  background: #c94b4b;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
+/* Footer */
 footer {
-  padding: 20px;
-  background: #4b134f;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #6b2d5e 0%, #4b1e42 100%);
   color: white;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .section-title, .section-heading {
+    font-size: 2rem;
+  }
+
+  .event-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .event-card.featured {
+    transform: scale(1);
+  }
+
+  .event-card.featured:hover {
+    transform: translateY(-10px);
+  }
+
+  .ornament {
+    font-size: 1.5rem;
+  }
+
+  .timer-display {
+    font-size: 1.8rem;
+  }
+
+  .rsvp input {
+    padding: 12px 15px;
+  }
+
+  .rsvp button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
 }

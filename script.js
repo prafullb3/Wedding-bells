@@ -1,5 +1,5 @@
 // Countdown Timer
-const weddingDate = new Date("December 15, 2026 19:00:00").getTime();
+const weddingDate = new Date("May 9, 2026 12:30:00").getTime();
 
 const timer = setInterval(() => {
   const now = new Date().getTime();
@@ -17,12 +17,11 @@ const timer = setInterval(() => {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   document.getElementById("timer").innerHTML =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    `<span class="countdown-item"><span class="countdown-number">${days}</span><span class="countdown-label">Days</span></span>
+     <span class="countdown-separator">:</span>
+     <span class="countdown-item"><span class="countdown-number">${hours}</span><span class="countdown-label">Hours</span></span>
+     <span class="countdown-separator">:</span>
+     <span class="countdown-item"><span class="countdown-number">${minutes}</span><span class="countdown-label">Minutes</span></span>
+     <span class="countdown-separator">:</span>
+     <span class="countdown-item"><span class="countdown-number">${seconds}</span><span class="countdown-label">Seconds</span></span>`;
 }, 1000);
-
-// RSVP Demo
-document.getElementById("rsvpForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  document.getElementById("rsvpMsg").innerText =
-    "Thank you! Your response has been recorded 💕";
-});
