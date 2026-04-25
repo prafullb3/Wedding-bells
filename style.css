@@ -67,7 +67,7 @@ body {
 .hero {
   margin-top: 60px;
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(240, 213, 224, 0.8) 0%, rgba(232, 196, 216, 0.8) 50%, rgba(218, 181, 204, 0.8) 100%), url('Aniket-1.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Aniket-1.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -416,7 +416,10 @@ section:nth-child(odd) {
 
 /* Gallery Section */
 .gallery {
-  background: #fdfbf9;
+  background: linear-gradient(135deg, rgba(253, 251, 249, 0.8) 0%, rgba(245, 241, 237, 0.8) 100%), url('Aniket-1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 80px 20px;
 }
 
@@ -439,7 +442,7 @@ section:nth-child(odd) {
 }
 
 .gallery-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 15px 50px rgba(201, 159, 181, 0.2);
 }
 
